@@ -1,0 +1,19 @@
+{
+	"manifest_version": 2,
+	"name": "Github Stars",
+	"version": "0.1",
+	"content_scripts": [
+		{
+			"matches": ["https://github.com/*/awesome*"],
+			"js": ["jquery-1.11.1.js", "main.js"]
+		}
+	],
+	"browser_action": {
+		"default_title": "Github Most Stars",
+		"default_popup": "login.html"
+	},
+	"permissions": [
+		"*://api.github.com/*",
+		"storage"
+	]
+}
